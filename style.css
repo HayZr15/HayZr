@@ -1,0 +1,196 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 60px;
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 0 0 15px #0ff;
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+}
+
+.sidebar a {
+  color: #0ff;
+  margin: 20px 0;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar a:hover {
+  transform: scale(1.2);
+  color: #0ff;
+}
+
+/* Main content */
+main {
+  margin-left: 60px;
+  width: 100%;
+}
+
+/* Header */
+header {
+  padding: 60px 20px;
+  background: #0d0d0d;
+  box-shadow: 0 0 20px #0ff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 20px;
+  color: #ccc;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* About */
+.about {
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.about p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Song section */
+.song {
+  padding: 50px 20px;
+  background: #080808;
+  text-align: center;
+}
+
+.song-title {
+  font-size: 36px;
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f;
+  margin-bottom: 30px;
+}
+
+audio {
+  width: 90%;
+  max-width: 400px;
+  filter: drop-shadow(0 0 10px #0ff);
+}
+
+/* Spotify button */
+.spotify-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: #18b44e;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #1DB954;
+  transition: 0.3s ease;
+}
+
+.spotify-btn:hover {
+  box-shadow: 0 0 20px #1DB954, 0 0 30px #1DB954;
+}
+
+.spotify-btn.disabled {
+  background: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* SoundCloud button */
+.soundcloud-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: #b1570e;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #000000;
+  transition: 0.3s ease;
+}
+
+.spotify-btn:hover {
+  box-shadow: 0 0 20px #1DB954, 0 0 30px #1DB954;
+}
+
+.spotify-btn.disabled {
+  background: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  background: #0d0d0d;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .sidebar a {
+    margin: 0 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .song-title {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+}
